@@ -121,6 +121,9 @@ class Reversi:
                 print(f"AI ({'Black' if self.current_player == BLACK else 'White'}) is thinking...")
                 ai_player.move(self)
             else:
+                valid_moves = self.get_valid_moves()
+                formatted_moves = [(chr(col + ord('a')), row + 1) for row, col in valid_moves]
+                print(f"Valid moves for {'Black' if self.current_player == BLACK else 'White'}: {formatted_moves}")
                 move = input("Enter your move (e.g., e3 or 'q' to quit): ").strip().lower()
                 if move == "q":
                     print("Game exited.")
@@ -240,7 +243,6 @@ if __name__ == "__main__":
 
     ai_black = None
     ai_white = None
-try:
     if choice == "2":
         ai_white = MiniMaxAI(WHITE, depth=3)  # AI as White
     elif choice == "3":
@@ -254,6 +256,5 @@ try:
     elif choice == "6":
         ai_black = RandomAI(BLACK)
         ai_white = RandomAI(WHITE)
-except:
     game = Reversi(ai_black, ai_white)
     game.play()
