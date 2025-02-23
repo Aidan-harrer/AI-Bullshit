@@ -244,14 +244,14 @@ if __name__ == "__main__":
     ai_black = None
     ai_white = None
     if choice == "2":
-        ai_white = MiniMaxAI(WHITE, depth=3)  # AI as White
+        ai_white = MiniMaxAI(WHITE, depth=6)  # AI as White
     elif choice == "3":
-        ai_black = MiniMaxAI(BLACK, depth=3)  # AI as Black
+        ai_black = MiniMaxAI(BLACK, depth=6)  # AI as Black
     elif choice == "4":
-        ai_black = MiniMaxAI(BLACK, depth=3)  # AI as Black
-        ai_white = MiniMaxAI(WHITE, depth=3)  # AI as White
+        ai_black = MiniMaxAI(BLACK, depth=6)  # AI as Black
+        ai_white = MiniMaxAI(WHITE, depth=6)  # AI as White
     elif choice == "5":
-        ai_black = MiniMaxAI(BLACK, depth=3)
+        ai_black = MiniMaxAI(BLACK, depth=6)
         ai_white = RandomAI(WHITE)
     elif choice == "6":
         ai_black = RandomAI(BLACK)
