@@ -48,7 +48,7 @@ class Localizer:
         ret = None
         if self.__sense != None:
             ret = self.__sm.reading_to_position(self.__sense)
-        return ret;
+        return ret
 
     # get the currently most likely position, based on single most probable pose
     def most_likely_position(self) -> (int, int):
