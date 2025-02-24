@@ -32,7 +32,7 @@ class RobotSim:
         if( newState == -1) :
             print( " no new state found ")
         
-        self.__currentState = newState;
+        self.__currentState = newState
         
         return self.__currentState
     
