@@ -76,7 +76,7 @@ class ObservationModel:
     # get the diagonale matrix O_reading with probabilities of the states i, i=0...nrOfStates-1 
     # to have produced reading "reading", returns a 2d-float array
     # use None for "no reading"
-    def get_o_reading(self, reading: int): #np.array(2):
+    def get_o_reading(self, reading: int) -> np.array(2):
         if (reading == None): reading = self.__num_readings - 1
         return np.diag( self.__vectors[reading, :])
 

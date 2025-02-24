@@ -34,7 +34,7 @@ class StateModel:
         y = (s - x * self.__cols * self.__head) // self.__head
         h = s % self.__head
 
-        return x, y, h
+        return x, y, h;
 
     def pose_to_state(self, x: int, y: int, h: int) -> int:
         return x * self.__cols * self.__head + y * self.__head + h
