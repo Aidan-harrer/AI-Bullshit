@@ -59,7 +59,7 @@ class HMMSmoother:
         :param f_k: Filtered probability distributions from HMMFilter
         :return: Smoothed probability distributions
         """
-        num_states = len(f_k[0])
+        num_states = len(f_k)
         num_timesteps = len(sensor_r_seq)
 
         # Initialize backward message b_k with all 1s
